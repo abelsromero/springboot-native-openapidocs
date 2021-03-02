@@ -1,5 +1,6 @@
-== Springfox Native test
+== Springdocs Native test
 
+Reference: https://repo.spring.io/milestone/org/springframework/experimental/spring-graalvm-native-docs/0.8.5/spring-graalvm-native-docs-0.8.5.zip!/reference/index.html
 
 == Usage
 
@@ -10,3 +11,13 @@ curl -X POST http://localhost:8080/echo \
 -H 'Content-Type: application/json' \
 -d '{"text":"Hello!!"}'
 ----
+
+Swagger UI:: http://localhost:8080/swagger-ui/index.html?configUrl=/v3/api-docs/swagger-config
+OpenAPI endpoint:: http://localhost:8080/v3/api-docs
+
+
+== Notes
+
+SpringFox did not work out-of-the-box once the dependency was added.
+
+ implementation 'io.springfox:springfox-boot-starter:3.0.0'
