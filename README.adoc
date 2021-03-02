@@ -1,0 +1,12 @@
+== Springfox Native test
+
+
+== Usage
+
+Service contains a simple message that can be called with
+
+----
+curl -X POST http://localhost:8080/echo \
+-H 'Content-Type: application/json' \
+-d '{"text":"Hello!!"}'
+----
