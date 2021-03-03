@@ -30,7 +30,7 @@ test {
     useJUnitPlatform()
 }
 
-if (System.getenv('BUILD_NATIVE_IMAGE') == "true") {
+if (System.getenv('NATIVE_IMAGE') == "true") {
     repositories {
         maven { url "https://repo.spring.io/libs-milestone" }
         maven { url 'https://repo.spring.io/snapshot' }
@@ -39,6 +39,7 @@ if (System.getenv('BUILD_NATIVE_IMAGE') == "true") {
     dependencies {
         implementation "org.springframework.experimental:spring-graalvm-native:0.8.5"
     }
+
     bootBuildImage {
         environment = [
                 "BP_BOOT_NATIVE_IMAGE": "true"
